@@ -16,7 +16,7 @@ with col1:
     select_box = st.selectbox('Navigation', ['Exploratory Analysis', 'Predictive analysis'])
 
 
-df = pd.read_csv('C:/Users/HP/Desktop/heart.csv')
+df = pd.read_csv('https://github.com/kimhatem/healthcare/blob/92572243f2ea2b6bbaae43d1044284976ebff35b/heart.csv')
 
 
 df.columns = ['age', 'sex', 'chest_pain_type', 'resting_blood_pressure', 'serum_cholesterol', 'fasting_blood_sugar', 'rest_ecg', 'max_heart_rate',
@@ -158,7 +158,7 @@ if select_box == 'Exploratory Analysis':
 if select_box == 'Predictive analysis':
 
 
-    df = pd.read_csv('C:/Users/HP/Desktop/heart.csv')
+    df = pd.read_csv('https://github.com/kimhatem/healthcare/blob/92572243f2ea2b6bbaae43d1044284976ebff35b/heart.csv')
 
     X = df.drop('target', axis=1).copy()
     y = df['target'].copy()
