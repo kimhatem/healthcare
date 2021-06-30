@@ -1,15 +1,8 @@
 import pandas as pd
-import plotly.graph_objects as go
-from plotly import tools
-import plotly.offline as py
 import plotly.express as px
-import plotly.figure_factory as ff
-from plotly.offline import iplot
 import streamlit as st
-import base64
 import sklearn
 import numpy as np
-import pickle as pkl
 import pandas as pd
 
 st.set_page_config(layout="wide", page_icon="⚕️")
@@ -21,7 +14,6 @@ st.markdown(f"<h3 style='text-align:center;' >{'by Kim Hatem'}</h3>", unsafe_all
 col1,col2,col3 = st.beta_columns(3)
 with col1:
     select_box = st.selectbox('Navigation', ['Exploratory Analysis', 'Predictive analysis'])
-
 
 
 df = pd.read_csv('C:/Users/HP/Desktop/heart.csv')
