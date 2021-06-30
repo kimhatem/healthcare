@@ -15,8 +15,9 @@ col1,col2,col3 = st.beta_columns(3)
 with col1:
     select_box = st.selectbox('Navigation', ['Exploratory Analysis', 'Predictive analysis'])
 
-
-df = pd.read_csv('https://github.com/kimhatem/healthcare/blob/92572243f2ea2b6bbaae43d1044284976ebff35b/heart.csv')
+url = "https://drive.google.com/file/d/1jxmdKOANm3Q-FQ4hhmX-AwkuxTiKu-XS/view?usp=sharing"
+path = 'https://drive.google.com/uc?export=download&id='+url.split('/')[-2]
+df = pd.read_csv(path)
 
 
 df.columns = ['age', 'sex', 'chest_pain_type', 'resting_blood_pressure', 'serum_cholesterol', 'fasting_blood_sugar', 'rest_ecg', 'max_heart_rate',
@@ -158,7 +159,9 @@ if select_box == 'Exploratory Analysis':
 if select_box == 'Predictive analysis':
 
 
-    df = pd.read_csv('https://github.com/kimhatem/healthcare/blob/92572243f2ea2b6bbaae43d1044284976ebff35b/heart.csv')
+    url = "https://drive.google.com/file/d/1jxmdKOANm3Q-FQ4hhmX-AwkuxTiKu-XS/view?usp=sharing"
+    path = 'https://drive.google.com/uc?export=download&id='+url.split('/')[-2]
+    df = pd.read_csv(path)
 
     X = df.drop('target', axis=1).copy()
     y = df['target'].copy()
